@@ -9,15 +9,5 @@ module.exports = {
         pathRewrite: { "^/api": "/" },
       },
     },
-  },
-  proServer: {
-    proxy: {
-      "^/api": {
-        target: "https://api.publicapis.org",
-        changeOrigin: true,
-        logLevel: "debug",
-        pathRewrite: { "^/api": "/" },
-      },
-    },
-  },
+  }
 };

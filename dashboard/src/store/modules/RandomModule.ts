@@ -11,7 +11,7 @@ export default class RandomModule extends VuexModule {
 
   @MutationAction({ mutate: ["count", "entries"] })
   async fetchRandom(): Promise<any> {
-    const response = await axios.get("api/random");
+    const response = await axios.get("https://api.publicapis.org/random");
     return response.data;
   }
 

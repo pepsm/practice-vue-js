@@ -12,7 +12,7 @@ export default class Items extends VuexModule {
 
   @MutationAction({ mutate: ["count", "entries"] })
   async fetchAll(): Promise<any> {
-    const response = await (await axios.get("api/entries")).data;
+    const response = await (await axios.get("https://api.publicapis.org/entries")).data;
 
     const mapedEntries = mapEntries(response.entries);
     return { count: response.count, entries: mapedEntries };
