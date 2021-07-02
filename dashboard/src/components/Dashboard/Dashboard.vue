@@ -22,6 +22,7 @@
 }
 .categories {
   padding-top: 2vh !important;
+  margin-bottom: 5vh;
 }
 </style>
 <script lang="ts">

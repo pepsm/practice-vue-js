@@ -1,6 +1,6 @@
 <template>
-  <v-footer color="primary lighten-1 footer" padless>
-    <v-row justify="space-around" no-gutters>
+  <v-footer color="primary lighten-2 footer" padless>
+    <v-row justify="center" no-gutters>
       <v-btn
         v-for="(link, index) in links"
         :key="index"
@@ -12,8 +12,8 @@
       >
         {{ link.Name }}
       </v-btn>
-      <v-col class="primary lighten-2 py-4 text-center white--text" cols="12">
-        Copyright © <strong>{{ new Date().getFullYear() }}</strong>
+      <v-col class="primary lighten-1 py-4 text-center white--text" cols="12">
+        <strong>{{ new Date().getFullYear() }}</strong> © Dashboard
       </v-col>
     </v-row>
     <sitemap @update-links="UpdateLinks" />
