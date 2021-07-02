@@ -17,7 +17,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue, Watch} from "vue-property-decorator";
+import { Component, Vue, Watch } from "vue-property-decorator";
 import CategoriesModule from "@/store/modules/CategoriesModules";
 import { getModule } from "vuex-module-decorators";
 import { mapGetters } from "vuex";
@@ -47,16 +47,14 @@ export default class Categories extends Vue {
     this.categoriesModule.fetchCategories().then(() => {
       this.categories = this.categoriesModule.categories;
     });
-     this.paginationModule = getModule(PaginationModule, this.$store);
+    this.paginationModule = getModule(PaginationModule, this.$store);
   }
 
-   
   onClick(category: string): void {
-
-     var result = this.items.filter(function (e) {
+    var result = this.items.filter(function (e) {
       return e.Category.includes(category);
     });
-    console.log(this.items)
+    console.log(this.items);
     // Set the pagination
     var pagination = sliceEntries(result, this.rowsPerPage);
     this.paginationModule.updatePagination(pagination);
@@ -73,6 +71,5 @@ export default class Categories extends Vue {
 .categories {
   padding-top: 10vh;
   width: 100%;
-  display: none;
 }
 </style>

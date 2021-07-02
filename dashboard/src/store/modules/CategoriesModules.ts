@@ -11,7 +11,7 @@ export default class CategoriesModule extends VuexModule {
   @MutationAction({ mutate: ["categories"] })
   async fetchCategories(): Promise<any> {
     const response = await axios.get("https://api.publicapis.org/categories");
-    return {categories: response.data};
+    return { categories: response.data };
   }
 
   get getCategories(): Array<string> {
