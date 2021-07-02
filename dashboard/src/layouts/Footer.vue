@@ -1,5 +1,5 @@
 <template>
-  <v-footer color="primary lighten-1" padless>
+  <v-footer color="primary lighten-1 footer" padless>
     <v-row justify="center" no-gutters>
       <v-btn
         v-for="(link, index) in links"
@@ -19,6 +19,16 @@
     <sitemap @update-links="UpdateLinks" />
   </v-footer>
 </template>
+
+<style scoped>
+.footer {
+  position: fixed !important;
+  left: 0;
+  bottom: 0 !important;
+  width: 100%;
+  margin-top: 8vh !important;
+}
+</style>
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";

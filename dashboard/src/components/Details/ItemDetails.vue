@@ -120,6 +120,7 @@ export default class ItemDetails extends Vue {
   left: 0;
   z-index: 0;
   width: 100vw;
+  height: 100vh;
 }
 .container-item {
   width: 100%;
