@@ -51,9 +51,15 @@ export default class Item extends Vue {
   box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
   transform: scale(1.01);
 }
-@media (max-width: 640px) {
+@media (max-width: 600px) {
   .v-card {
-    width: 440px;
+    width: 100%;
   }
 }
+@media (max-width: 900px) {
+  .v-card {
+    width: 84%;
+  }
+}
+
 </style>

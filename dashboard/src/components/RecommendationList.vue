@@ -1,15 +1,11 @@
 <template>
-  <div>
-    <h1 class="recommendation-title">Recommendations:</h1>
-
-    <div class="recommendation-container">
-      <div
-        v-for="(item, index) in recommendations"
-        :key="index"
-        class="recommendation"
-      >
-        <item :item="item" />
-      </div>
+  <div class="recommendation-container">
+    <div
+      v-for="(item, index) in recommendations"
+      :key="index"
+      class="recommendation"
+    >
+      <item :item="item" />
     </div>
   </div>
 </template>
@@ -78,23 +74,35 @@ export default class RecommendationList extends Vue {
 .recommendation-container {
   width: 100%;
   display: flex;
-  margin: 0 auto;
+  margin-top: 2rem;
   display: grid;
   grid-gap: 1rem;
-}
-.recommendation {
-  margin-left: 30px;
-}
-.recommendation-title {
-  color: white;
-  z-index: 2;
-  background: cadetblue;
 }
 
 @media (min-width: 600px) {
   .recommendation-container {
+    grid-template-columns: repeat(1, 1fr);
+    text-align: center;
+  }
+}
+@media (min-width: 900px) {
+  .recommendation-container {
     grid-template-columns: repeat(3, 1fr);
-    align-items: flex-start;
+    grid-gap: 4rem;
+    text-align: center;
+  }
+}
+@media (min-width: 1340px) {
+  .recommendation-container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 4rem;
+    text-align: center;
+  }
+}
+@media (min-width: 1840px) {
+  .recommendation-container {
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
   }
 }
 </style>

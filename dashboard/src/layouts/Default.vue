@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app class="app">
     <!-- Must have the app property -->
     <Navbar />
     <v-main>
@@ -22,3 +22,9 @@ import Footer from "./Footer.vue";
 })
 export default class Default extends Vue {}
 </script>
+
+<style scoped>
+.app{
+  overflow: hidden;
+}
+</style>

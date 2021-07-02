@@ -1,5 +1,5 @@
 <template>
-  <div flat height="200px" tile>
+  <div>
     <v-app-bar fixed color="white">
       <router-link to="/">
         <v-toolbar-title class="brand"
@@ -56,8 +56,7 @@
   justify-content: center;
   align-content: center;
 }
-.item-title {
-}
+
 </style>
 
 <script lang="ts">

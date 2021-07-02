@@ -379,7 +379,7 @@
 
 <style scoped>
 .main {
-  margin-top: 15%;
+  margin-top: 10%;
 }
 
 .st0 {

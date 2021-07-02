@@ -8,7 +8,7 @@
 
 <style scoped>
 .item-list {
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   display: grid;
   grid-gap: 1rem;

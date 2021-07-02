@@ -17,7 +17,7 @@
 <style scoped>
 .parallax {
   width: 100vw;
-  height: 200px;
+  height: 40vh !important;
 }
 .subheading {
   letter-spacing: 2px;

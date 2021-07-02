@@ -1,6 +1,6 @@
 <template>
   <v-row justify="space-around" class="categories">
-    <v-col cols="categories.length" sm="10" md="8">
+    <v-col cols="categories.length" sm="10" md="14">
       <v-sheet elevation="10" class="py-4 px-1">
         <v-chip-group mandatory active-class="primary--text">
           <v-chip
@@ -69,7 +69,20 @@ export default class Categories extends Vue {
 
 <style>
 .categories {
-  padding-top: 10vh;
+  margin-top: 10vh !important;
   width: 100%;
+}
+
+@media (max-width: 1250px) {
+  .categories {
+    width: 100vw;
+    padding-left: 5vw;
+  }
+}
+@media (max-width: 600px) {
+  .categories {
+    width: 100vw;
+    padding-left: 5vw;
+  }
 }
 </style>

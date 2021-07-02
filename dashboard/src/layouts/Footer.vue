@@ -1,6 +1,6 @@
 <template>
   <v-footer color="primary lighten-1 footer" padless>
-    <v-row justify="center" no-gutters>
+    <v-row justify="space-around" no-gutters>
       <v-btn
         v-for="(link, index) in links"
         :key="index"
@@ -8,12 +8,12 @@
         text
         rounded
         :to="link.Path"
-        class="my-2"
+        class="my-2 link-btn"
       >
         {{ link.Name }}
       </v-btn>
       <v-col class="primary lighten-2 py-4 text-center white--text" cols="12">
-        {{ new Date().getFullYear() }} — <strong>Dashboard</strong>
+        Copyright © <strong>{{ new Date().getFullYear() }}</strong>
       </v-col>
     </v-row>
     <sitemap @update-links="UpdateLinks" />
@@ -21,12 +21,13 @@
 </template>
 
 <style scoped>
+@media (max-width: 400px) {
+  .link-btn {
+    font-size: 10px;
+  }
+}
 .footer {
-  position: fixed !important;
-  left: 0;
-  bottom: 0 !important;
-  width: 100%;
-  margin-top: 8vh !important;
+  margin-top: 10vh;
 }
 </style>
 
